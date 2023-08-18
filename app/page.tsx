@@ -20,7 +20,7 @@ export default function Chat() {
 					/>{" "}
 					Dolore's Chat
 				</h1>
-				<div className="border-2 border-slate-600 overflow-auto p-5">
+				<div className="border-2 border-slate-600 h-[80%] overflow-auto p-5">
 					{messages.map((m) => (
 						<div className=" flex gap-2 py-2 " key={m.id}>
 							{m.role === "user" ? (
@@ -36,7 +36,7 @@ export default function Chat() {
 				</div>
 
 				<form
-					className="  flex gap-2 items-center justify-center py-5   "
+					className="  flex gap-2 items-center justify-center py-5 "
 					onSubmit={handleSubmit}
 				>
 					<Input
