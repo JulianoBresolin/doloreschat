@@ -5,8 +5,8 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "doloreschat",
-	description: "doloreschat app",
+	title: "doloreschat AI",
+	description: "Chat de gerador de texto feito com IA",
 };
 
 export default function RootLayout({

@@ -6,6 +6,7 @@ import { Input } from "@mui/base/Input";
 import SendIcon from "@mui/icons-material/Send";
 import Avatar from "@mui/material/Avatar";
 import PersonIcon from "@mui/icons-material/Person";
+import Link from "next/link";
 export default function Chat() {
 	const { messages, input, handleInputChange, handleSubmit } = useChat();
 
@@ -49,7 +50,7 @@ export default function Chat() {
 						}}
 						value={input}
 						onChange={handleInputChange}
-						placeholder="Type something…"
+						placeholder="Type something in english (Digite algo em inglês) ..."
 					/>
 
 					<div className=" ">
@@ -58,7 +59,15 @@ export default function Chat() {
 						</Button>
 					</div>
 				</form>
-				<h2 className=" text-center text-sm">created by:Juliano Bresolin</h2>
+				<Link
+					href="https://julianobresolinux.vercel.app/"
+					target="_blank"
+					className="hover:underline hover:text-teal-400"
+				>
+					<h3 className=" text-center text-sm transition-all duration-300">
+						Created by: Juliano Bresolin
+					</h3>
+				</Link>
 			</div>
 		</>
 	);
