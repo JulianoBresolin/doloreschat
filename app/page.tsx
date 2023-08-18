@@ -21,7 +21,7 @@ export default function Chat() {
 					/>{" "}
 					Dolore's Chat
 				</h1>
-				<div className="border-2 border-slate-600 h-[80%] overflow-auto p-5">
+				<div className="border-2 border-slate-500 h-[80%] bg-slate-600 overflow-auto p-5 rounded-xl">
 					{messages.map((m) => (
 						<div className=" flex gap-2 py-2 " key={m.id}>
 							{m.role === "user" ? (
@@ -45,7 +45,7 @@ export default function Chat() {
 						slotProps={{
 							input: {
 								className:
-									"w-full text-sm font-normal leading-5 px-3 py-2 rounded-lg shadow-md shadow-slate-100 dark:shadow-slate-900 focus:shadow-outline-purple dark:focus:shadow-outline-purple focus:shadow-lg border border-solid border-slate-300 hover:border-purple-500 dark:hover:border-purple-500 focus:border-purple-500 dark:focus:border-purple-500 dark:border-slate-600 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-300 focus-visible:outline-0",
+									"w-full text-sm bg-gray-800  transition-all duration-300 font-normal leading-5 px-3 py-2 rounded-lg shadow-md shadow-slate-900 focus:shadow-outline-purple  focus:shadow-lg border-2 border-slate-500 hover:border-purple-500  focus:border-purple-500   text-slate-900  focus-visible:outline-0",
 							},
 						}}
 						value={input}
