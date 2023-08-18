@@ -45,7 +45,7 @@ export default function Chat() {
 						slotProps={{
 							input: {
 								className:
-									"w-full text-sm bg-gray-800  transition-all duration-300 font-normal leading-5 px-3 py-2 rounded-lg shadow-md shadow-slate-900 focus:shadow-outline-purple  focus:shadow-lg border-2 border-slate-500 hover:border-purple-500  focus:border-purple-500   text-slate-900  focus-visible:outline-0",
+									"w-full text-sm bg-gray-800  transition-all duration-300 font-normal leading-5 px-3 py-2 rounded-lg shadow-md shadow-slate-900 focus:shadow-outline-purple  focus:shadow-lg border-2 border-slate-500 hover:border-purple-500  focus:border-purple-500   text-slate-100  focus-visible:outline-0",
 							},
 						}}
 						value={input}
