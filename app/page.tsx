@@ -15,7 +15,7 @@ export default function Chat() {
 				<h1 className="text-4xl font-bold pb-12 flex gap-2 items-center justify-center ">
 					<Avatar
 						alt="Robo"
-						src="/dolores.png"
+						src="/Dolores.webp"
 						sx={{ width: 56, height: 56 }}
 					/>{" "}
 					Dolore's Chat
@@ -28,7 +28,7 @@ export default function Chat() {
 									<PersonIcon />
 								</Avatar>
 							) : (
-								<Avatar alt="Robo" src="/dolores.png" />
+								<Avatar alt="Robo" src="/Dolores.webp" />
 							)}
 							{m.content}
 						</div>
