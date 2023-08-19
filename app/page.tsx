@@ -19,7 +19,7 @@ export default function Chat() {
 						src="/Dolores.webp"
 						sx={{ width: 56, height: 56 }}
 					/>
-					Dolores's Chat
+					Dolores AI
 				</h1>
 				<div className="border-2 border-slate-500 h-[80%] bg-slate-600 overflow-auto p-5 rounded-xl">
 					{messages.map((m) => (
