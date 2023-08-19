@@ -5,7 +5,7 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "doloreschat AI",
+	title: "dolores AI",
 	description: "Chat de gerador de texto feito com IA",
 };
 
