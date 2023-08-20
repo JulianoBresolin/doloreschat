@@ -57,9 +57,9 @@ export default function Chat() {
 						<Stack className="flex-wrap gap-1" direction="row" spacing={1}>
 					{predefinedQuestions.map((question, index) => (
 						<Chip
-						className=" bg-cyan-700 text-slate-50"
+						
 						 key={index} label={question} 
-						variant="outlined"
+						variant="filled"
 						color="primary"
 						 onClick={() => handleQuestionClick(question)}/>
 					))}
