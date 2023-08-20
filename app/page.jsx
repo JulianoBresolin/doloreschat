@@ -1,5 +1,5 @@
 "use client";
-
+import React, { useState } from "react";
 import { useChat } from "ai/react";
 import Button from "@mui/material/Button";
 import { Input } from "@mui/base/Input";
@@ -7,9 +7,23 @@ import SendIcon from "@mui/icons-material/Send";
 import Avatar from "@mui/material/Avatar";
 import PersonIcon from "@mui/icons-material/Person";
 import Link from "next/link";
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
 export default function Chat() {
 	const { messages, input, handleInputChange, handleSubmit } = useChat();
+	const predefinedQuestions = [
+		"How does AI work?",
+		"What is natural language processing?",
+		"how can you help me?",
+		"write a love letter.",
 
+		// Adicione mais perguntas aqui
+	];
+
+	const handleQuestionClick = (question) => {
+		handleInputChange({ target: { value: question } });
+	};
+	
 	return (
 		<>
 			<div className="mx-auto w-[80%] h-screen  bg-slate-700  py-10 flex  flex-col ">
@@ -37,9 +51,20 @@ export default function Chat() {
 				</div>
 
 				<form
-					className="  flex gap-2 items-center justify-center py-5 "
+					className="  flex gap-2 items-center flex-col justify-center py-5 "
 					onSubmit={handleSubmit}
 				>
+						<Stack className="flex-wrap gap-1" direction="row" spacing={1}>
+					{predefinedQuestions.map((question, index) => (
+						<Chip
+						className=" bg-cyan-700 text-slate-50"
+						 key={index} label={question} 
+						variant="outlined"
+						color="primary"
+						 onClick={() => handleQuestionClick(question)}/>
+					))}
+				</Stack>
+				<div className="flex gap-2 items-center  justify-center w-full">
 					<Input
 						className=" w-[60%] "
 						slotProps={{
@@ -53,12 +78,13 @@ export default function Chat() {
 						placeholder="Type something in english (Digite algo em inglês) ..."
 					/>
 
-					<div className=" ">
+					
 						<Button variant="contained" type="submit" endIcon={<SendIcon />}>
 							Send
 						</Button>
 					</div>
 				</form>
+			
 				<Link
 					href="https://julianobresolinux.vercel.app/"
 					target="_blank"
@@ -72,3 +98,6 @@ export default function Chat() {
 		</>
 	);
 }
+
+
+
